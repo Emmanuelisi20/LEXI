@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---Navigation Bar to my Profile ---->
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!---Linkers to different pages on the website---->
+        <!---Opening Navigation Bar ---->
+        <header>
+            <nav>
+                <a href="TtS.html">𝐓𝐲𝐩𝐢𝐧𝐠 𝐒𝐩𝐞𝐚𝐤𝐞𝐫</a>
+                <a href="StT.html">𝐕𝐨𝐢𝐜𝐞 𝐂𝐚𝐭𝐜𝐡𝐞𝐫</a>
+                <a href="lexiwordbooster.html"> 𝐖𝐨𝐫𝐝 𝐁𝐨𝐨𝐬𝐭𝐞𝐫</a>
+                <a href="About Lexi.html">𝐀𝐁𝐎𝐔𝐓 𝐋𝐄𝐗𝐈</a>
+            </nav>
+        </header>
+    </nav>
+</section>
+<br><br><br>
+
+<head style="background-color: #2e7ecfff;">
+    <title>Voice Catcher</title>
+    <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+    <p align="left" style="background-color: #2e7ec6ff;"><img src="img/lexi_Logo.png" height="50" width="50">
+        <img src="img/lex.png" height="50" width="100" align="right"></p>
+
+
+
+    <p style="background-color: #073763ff;" align="left">
+        <font color="white"><strong>Menu</font></strong>
+            <a href="lexi-Log-in.html"><img src="img/logout.png" height="30" width="100" align="right"></a><br><br>
+    </p>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87932744-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-87932744-1');
+    </script>
+    <title>Voice Catcher</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="http://www.oratlas.com/LOT/code.js"></script>
+    <link rel="stylesheet" href="http://www.oratlas.com/LOT/estilos.css" type="text/css">
+
+    <img src="img/voicecatcher1.png" height="110" width="300" class="center">
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: center;
+            width: 30%;
+        }
+    </style>
+
+    <article style="width:700px;height:450px;float:center;margin-right:auto;margin-left:auto;">
+        <h3 style="float: center;"> Click on the "Start" button and begin saying something into the mic. <br> Lexi will then write your word or phrase in the textbox. When you are finished recording, click "Stop."</h3>
+        <div style="float:center;width:301px;margin-right:10px;display:block;min-height:200px; ">
+
+
+            <button class="btn-start" width="120px" style="margin-left: 200px;margin-left: 10px;"> Start</button>
+            <button class="btn-end" width="120px"> Stop</button>
+            <textarea></textarea></div>
+    </article>
+    <br>
+
+
+
+
+    <style>
+        body {
+            background-color: #EDEA90;
+        }
+        
+        textarea {
+            margin-left: auto;
+            margin-right: auto;
+            width: 657px;
+            height: 250px;
+        }
+    </style>
+
+
+    <script>
+        class SpeechRecognitionApi {
+            constructor(options) {
+                const SpeechToText = window.speechRecognition || window.webkitSpeechRecognition;
+                this.speechApi = new SpeechToText();
+                this.output = options.output ? options.output : document.createElement("div");
+                this.speechApi.continuous = true;
+                this.speechApi.interimResult = false;
+                this.speechApi.onresult = (event) => {
+                    var resultIndex = event.resultIndex;
+                    var transcript = event.results[resultIndex][0].transcript;
+                    this.output.textContent += transcript;
+                }
+            }
+            init() {
+                this.speechApi.start();
+            }
+            stop() {
+                this.speechApi.stop();
+            }
+        }
+        window.onload = function() {
+            var speech = new SpeechRecognitionApi({
+                output: document.querySelector(".output")
+            })
+            document.querySelector(".btn-start").addEventListener("click", () => {
+                speech.init();
+            })
+            document.querySelector(".btn-end").addEventListener("click", () => {
+                speech.stop();
+            })
+        }
+    </script>
+    <div class="nav_bar">
+        <ul>
+            <td>
+                <!--<li><a href="StT.html" target="_blank"><img src="voicecatcher1.png" width="130" height="100"></li></a>-->
+
+                <!--<img src="lexi_projectile.png" height="100" width="100" align="left">-->
+
+                <br>
+                <br>
+                <li>
+                    <a href="TtS.html"><img src="img/typingspeaker1.png" width="190" height="100" style="margin-top: -80px"></li>
+                </a><br><br><br>
+
+
+                <br><br><br><br>
+                <li><a href="wordbooster.html"><img src="img/wordbooster.png" width="190" height=100" style="margin-top: -80px"></li></a><br><br>
+
+
+                    <br><br><br><br><br>
+                    <li>
+                        <a href="alphabet.html" "target="_blank "><img src="img/alphabet.png " width="190 " height=100" style="margin-top: -80px"></li>
+                    </a><br><br>
+
+        </ul>
+        </li>
+        </li>
+        </li>
+        </td>
+        <td align="right" valign="top"></td>
+
+        <style>
+                body {
+                background-color: #EDEA90;
+            }
+            
+            .nav_bar {
+                margin-left: -20px;
+            }
+            
+            .nav_bar ul {
+                list-style: none;
+            }
+            
+            .nav_bar ul li {
+                float: left;
+                display: inline-block;
+                margin-top: -400px;
+        </style>
+
+
+        </body>
+        </ul>
+    </div>
+    </font>
+    </p>
+</head>
+<footer style="background-color: #cef43fff;">
+    <p align="left">
+        <font color="blue">&copy; &nbsp;&nbsp;&nbsp;&nbsp;LexiWebapplication2020</font>
+    </p>
+</footer>
+
+</html>
+
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="envoltor_externo" style="margin-top: -600px;">            
+            <header style ="background-color: lime;">    
+
+           <img src="lexi_projectile.png" height="60" width="60" align="left">-->
+
+<!--<table style ="border-right-color: lime;">
+                    
+                        
+                               <img src="voicecatcher1.png" height="110" width="400">
+
+                
+            </header>-->
+
+
+<!--<h3 style="margin-top:30px;"> Click on the "Start" button and begin saying something into the mic. <br> Lexi will then write your word or phrase in the textbox. When you are finished recording, click "Stop."</h3>                
+                <!--<div style="float:center; width:301px;margin-top:10px;display:block;min-height:250px;">-->
+
+
+
+<!-- <style>
+  .output{
+    display: block;
+    width: 80%;
+    height:400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  h4{text-align: center;
+  }
+  
+</style>
+
+</head>
+
+<body>
+
+                <style>
+                    .nav_bar {
+                        display: inline;
+                    }
+                
+                    .nav_bar ul {
+                        list-style: none;
+                        margin-top: 700px;
+                    }
+                
+                    .nav_bar ul li {
+                        float: left;
+                        margin-right: auto;
+                        display: inline-block;
+                        margin-top: -1050px;
+                    }
+                
+                    textarea {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                
+                    article {
+                        margin-top: -1430px;
+                    }
+                
+                    .popup {
+                        zoom: 1.0;
+                        position: absolute;
+                        text-decoration: none;
+                    }
+                
+                    .popup span {
+                        position: absolute;
+                        display: inline-block;
+                        top: 00px;
+                        left: 0px;
+                        width: 0px;
+                        padding: 0px;
+                        left: -99em;
+                    }
+                
+                    .popup:hover {
+                        visibility: visible;
+                        width: 30px;
+                        height: 30px;
+                    }
+                
+                    .popup:hover span {
+                        left: auto;
+                    }
+                
+                    * html .popup span {
+                        position: absolute;
+                    }
+                </style>
+                <style>
+                    .center {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 20px;
+                        float: center;
+                        width: 30%
+                    }
+                </style>
+                <! ––1st-->
+<style>
+    /* Header */
+    
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        background: #ffffff;
+        color: #000;
+        font-family: ubuntu;
+        height: 70px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav>a {
+        color: inherit;
+        text-decoration: none;
+        background: inherit;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        height: inherit;
+        line-height: 70px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 25%;
+    }
+    
+    nav>a:hover {
+        background: #f1f2f6;
+        border-bottom: 5px solid #545454;
+        border-left: 10px solid #939393;
+        border-right: 10px solid #939393;
+        border-top: 5px solid #545454;
+        line-height: 60px;
+        transition: .3s;
+    }
+    /* Header */
+    
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+    * {
+        box-sizing: border-box;
+    }
+</style>
+
+
+<! ––2nd -->
+<style>
+    * {
+        box-sizing: border-box
+    }
+    /* Add padding to containers */
+    
+    .container {
+        padding: 40px;
+    }
+    
+    .icon {
+        padding: 10px;
+        background: Black;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+    /* Full-width input fields */
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: white;
+        outline: none;
+    }
+    
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+    /* Set a style for the submit/register button */
+    
+    .registerbtn {
+        background-color: #07b053;
+        color: #07b053;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    .registerbtn:hover {
+        opacity: 1;
+    }
+    
+    a {
+        color: dodgerblue;
+    }
+    
+    .signin {
+        background-color: white;
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #222;
+        color: #fff;
+        font-size: 14px;
+        bottom: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 999;
+    }
+</style>
+
+<!--
+<button class="btn-start" width="120px" style="margin-left: 200px;margin-bottom: 10px;"> Start</button>
+<button class="btn-end" width="120px"> Stop</button>
+<textarea class="output "></textarea>
+
+<div class="nav_bar">
+    <ul>
+        <td>
+            <!--<li><a href="StT.html" target="_blank"><img src="voicecatcher1.png" width="130" height="100"></li></a>-->
+
+<!--<img src="lexi_projectile.png" height="100" width="100" align="left">-->
+
+
+<!--<li><a href="TtS.html"><img src="typingspeaker1.png" width="190" height="100" style="margin-top: -80px"></li></a><br><br><br>
+      
+      
+      <br><br><br><br><li><a href="wordbooster.html"><img src="wordbooster.png" width="190" height=100" style="margin-top: -80px"></li></a><br><br>
+
+
+      <br><br><br><br><br><li><a href="alphabet.html""target="_blank"><img src="alphabet.png" width="190" height=100" style="margin-top: -80px"style="margin-top: -80px"></li></a><br><br>
+      
+    </ul>
+        </li></li></li></td>
+    <td align= "right" valign="top"></td>
+
+    <style>
+
+        body{
+            background-color:#EDEA90 ;
+        }
+        .nav_bar {
+          margin-top: -330px;
+    margin-left:-20px;
+}
+.nav_bar ul{
+  list-style:none;
+}
+.nav_bar ul li{
+  float:left;
+  margin-left:10px;
+}
+
+ </style>
+
+<script>
+  
+class SpeechRecognitionApi{
+  constructor(options) {
+    const SpeechToText = window.speechRecognition || window.webkitSpeechRecognition;
+    this.speechApi = new SpeechToText();
+    this.output = options.output ? options.output : document.createElement("div");
+    this.speechApi.continuous = true;
+    this.speechApi.interimResult = false;
+    this.speechApi.onresult = (event) => {
+      var resultIndex = event.resultIndex;
+      var transcript = event.results[resultIndex][0].transcript;
+      this.output.textContent += transcript;
+    }
+  }
+  init() {
+    this.speechApi.start();
+  }
+  stop() {
+    this.speechApi.stop();
+  }
+}
+window.onload = function (){
+  var speech = new SpeechRecognitionApi({
+    output: document.querySelector(".output")
+  })
+  document.querySelector(".btn-start").addEventListener("click", () => {
+    speech.init();
+  })
+  document.querySelector(".btn-end").addEventListener("click", () => {
+    speech.stop();
+  })
+}
+
+
+</script>
+-->
+</body>
+<footer style="background-color: #cef43fff; float:left;><p align = " left "><font color= "blue ">&copy; LexiWebapplication2020</font></p></footer>
+</html>
